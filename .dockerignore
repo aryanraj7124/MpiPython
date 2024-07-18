@@ -1,0 +1,24 @@
+# Ignore Python bytecode
+*.pyc
+__pycache__
+
+# Ignore Git files and directories
+.git
+.gitignore
+
+# Ignore Docker files
+Dockerfile
+docker-compose.yml
+
+# Ignore Node.js dependencies
+node_modules
+
+# Ignore IDE files
+.vscode
+.idea
+
+# Ignore other unnecessary files
+*.md
+*.log
+*.csv
+*.tmp

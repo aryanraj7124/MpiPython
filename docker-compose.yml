@@ -1,0 +1,15 @@
+version: '3.8'  # Use version 3.8 or newer
+
+services:
+  mpi_prime:
+    build:
+      context: .  # Use the Dockerfile in the current directory
+      dockerfile: Dockerfile
+    command: ["mpiexec", "-np", "4", "python3", "prime.py"]
+    volumes:
+      - .:/app  # Mount the current directory to /app in the container
+    deploy:
+      resources:
+        limits:
+          cpus: "2.0"  # Limit the container to 2 CPUs (adjust as needed)
+          memory: "4G"  # Limit the container to 4GB of memory (adjust as needed)
